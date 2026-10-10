@@ -1,0 +1,35 @@
+algoritmo "Bubble Sort"
+var
+
+
+  contador, contador2, aux: inteiro
+  numeros: vetor[1..5] de inteiro
+
+inicio
+  numeros[1] <- 5
+  numeros[2] <- 3
+  numeros[3] <- 11
+  numeros[4] <- 29
+  numeros[5] <- 50
+
+  para contador de 1 ate 5 faca
+    para contador2 de 1 ate (5 - contador) faca
+      se numeros[contador2] > numeros[contador2 + 1] entao
+        aux <- numeros[contador2]
+        numeros[contador2] <- numeros[contador2 + 1]
+        numeros[contador2 + 1] <- aux
+
+      fimse
+    fimpara
+  fimpara
+
+
+
+  escreval("")
+  para contador de 1 ate 5 faca
+    escreval(numeros[contador], " - ")
+  fimpara
+  escreval(" ")
+
+
+fimalgoritmo
